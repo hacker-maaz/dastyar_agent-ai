@@ -1,0 +1,22 @@
+#!/bin/bash
+
+AI_HOME="$HOME/ai-server"
+SCRIPTS="$AI_HOME/scripts"
+
+COMMAND="$1"
+
+if [ -z "$COMMAND" ]; then
+    "$SCRIPTS/help.sh"
+    exit 0
+fi
+
+SCRIPT="$SCRIPTS/$COMMAND.sh"
+
+if [ -x "$SCRIPT" ]; then
+    shift
+    "$SCRIPT" "$@"
+else
+    echo "Unknown command: $COMMAND"
+    echo
+    "$SCRIPTS/help.sh"
+fi

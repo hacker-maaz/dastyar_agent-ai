@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Logs
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Temporary archives
+*.tar.gz
+
+# Generated inspection output
+full_tree.txt
+
+# Runtime state
+state/
+
+# Separate project repositories
+projects/k-V4/
